@@ -1,0 +1,14 @@
+version: '3'
+services:
+  speedtest:
+    build: .
+    container_name: ookla-speedtest-server
+    ports:
+      - "80:80"      
+      - "443:443"    
+      - "8080:8080"  
+      - "5060:5060"
+    volumes:
+      - ./letsencrypt:/etc/letsencrypt
+      - ./speedtest_data:/var/www/html/speedtest
+    restart: always
