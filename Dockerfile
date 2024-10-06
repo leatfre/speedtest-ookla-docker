@@ -10,6 +10,7 @@ ENV DOMAIN_ALLOWED=tusitio.com \
     EMAIL=tuemail@tusitio.com \
     TZ=America/Argentina/Buenos_Aires
 
+
 # Paso 1: Actualizar el sistema e instalar Certbot, Ookla, Nginx, cron y otras utilidades necesarias
 RUN apt-get update && apt-get install -y \
     wget certbot tzdata curl apt-utils libssl-dev \
